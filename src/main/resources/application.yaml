@@ -9,7 +9,3 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
-server:
-  error:
-    whitelabel:
-      enabled: false

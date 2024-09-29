@@ -20,4 +20,10 @@ public class Customer {
     private Long customerId;
     @Column(nullable = false)
     private String name, email;
+    @Column(nullable = false)
+    private String password;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role role;
+
 }
