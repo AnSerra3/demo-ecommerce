@@ -10,4 +10,4 @@ spring:
     hibernate:
       ddl-auto: none
   flyway:
-    enabled: false
+    enabled: true

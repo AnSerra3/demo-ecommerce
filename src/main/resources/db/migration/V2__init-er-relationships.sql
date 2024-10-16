@@ -89,9 +89,11 @@ CREATE TABLE purchase_history (
     card_id BIGINT,
     product_id BIGINT,
     timestamp TIMESTAMP,
+    quantity INT NOT NULL,
     PRIMARY KEY (user_id, postal_code, street, card_id, product_id, timestamp),
     FOREIGN KEY (product_id) REFERENCES product(product_id),
-    FOREIGN KEY (user_id, card_id, street, postal_code, timestamp) REFERENCES purchase(user_id, card_id, street, postal_code, timestamp)
+    FOREIGN KEY (user_id, card_id, street, postal_code, timestamp) REFERENCES purchase(user_id, card_id, street, postal_code, timestamp),
+    CONSTRAINT quantity_constraint CHECK ( quantity > 0 )
 );
 
 CREATE TABLE ticket_attachment (
