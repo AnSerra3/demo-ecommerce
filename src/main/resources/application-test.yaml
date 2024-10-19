@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo_test
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
