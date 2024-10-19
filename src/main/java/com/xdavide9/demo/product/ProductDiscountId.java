@@ -15,15 +15,11 @@ import java.io.Serializable;
 @Embeddable
 public class ProductDiscountId implements Serializable {
     @Column(
-            name = "product_id",
-            insertable = false,
-            updatable = false
+            name = "product_id"
     )
     private Long productId;
     @Column(
-            name = "discount_code",
-            insertable = false,
-            updatable = false
+            name = "discount_code"
     )
     private String discountCode;
 }

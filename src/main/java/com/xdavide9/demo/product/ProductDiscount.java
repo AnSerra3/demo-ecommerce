@@ -35,5 +35,20 @@ public class ProductDiscount {
                     name = "billing_card_id_fkey"
             )
     )
+    @MapsId("productId")
     private Product product;
+    @ManyToOne(
+            targetEntity = Discount.class,
+            cascade = {CascadeType.PERSIST},
+            optional = false
+    )
+    @JoinColumn(
+            name = "discount_code",
+            referencedColumnName = "discount_code",
+            foreignKey = @ForeignKey(
+                    name = "product_discount_discount_code_fkey"
+            )
+    )
+    @MapsId("discountCode")
+    private Discount discount;
 }
